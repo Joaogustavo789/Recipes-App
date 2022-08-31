@@ -79,48 +79,56 @@ const SearchBar = () => {
   };
 
   return (
-    <div>
+    <div className="search-box">
       <input
+        className="search-bar-text"
+        placeholder="Search"
         type="text"
         value={ inputValue }
         data-testid="search-input"
         onChange={ (e) => setInputValue(e.target.value) }
       />
-      <label htmlFor="ingredient">
-        ingredient
-        <input
-          type="radio"
-          name="search-radio"
-          id="ingredient"
-          value="ingredient"
-          data-testid="ingredient-search-radio"
-          onChange={ (e) => setRadioValue(e.target.value) }
-        />
-      </label>
-      <label htmlFor="name">
-        name
-        <input
-          type="radio"
-          name="search-radio"
-          id="name"
-          value="name"
-          data-testid="name-search-radio"
-          onChange={ (e) => setRadioValue(e.target.value) }
-        />
-      </label>
-      <label htmlFor="first-letter">
-        first letter
-        <input
-          type="radio"
-          name="search-radio"
-          value="first-letter"
-          id="first-letter"
-          data-testid="first-letter-search-radio"
-          onChange={ (e) => setRadioValue(e.target.value) }
-        />
-      </label>
+      <div className="search-input-box">
+        <label className="text-input" htmlFor="ingredient">
+          ingredient
+          <input
+            className="search-radio"
+            type="radio"
+            name="search-radio"
+            id="ingredient"
+            value="ingredient"
+            data-testid="ingredient-search-radio"
+            onChange={ (e) => setRadioValue(e.target.value) }
+          />
+        </label>
+        <label className="text-input" htmlFor="name">
+          name
+          <input
+            className="search-radio"
+            type="radio"
+            name="search-radio"
+            id="name"
+            value="name"
+            data-testid="name-search-radio"
+            onChange={ (e) => setRadioValue(e.target.value) }
+          />
+        </label>
+        <label className="text-input" htmlFor="first-letter">
+          first letter
+          <input
+            className="search-radio"
+            type="radio"
+            name="search-radio"
+            value="first-letter"
+            id="first-letter"
+            data-testid="first-letter-search-radio"
+            onChange={ (e) => setRadioValue(e.target.value) }
+          />
+        </label>
+      </div>
 
       <button
+        className="search-btn"
         type="button"
         data-testid="exec-search-btn"
         onClick={ handleChange }

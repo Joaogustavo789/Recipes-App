@@ -1,0 +1,80 @@
+.header {
+  background: var(--primary-red-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+.title-header {
+  color: var(--primary-background-color);
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 63px;
+  margin: 5px 20px;
+}
+
+.btn-header {
+  background-color: var(--secondary-background-color);
+  border-radius: 10px;
+  height: 47px;
+  left: 116px;
+  margin: 5px 10px;
+  top: 588px;
+  width: 47px;
+}
+
+.search-box {
+  background: rgb(57, 74, 89);
+  border: 1px;
+  position: absolute;
+  width: 360px;
+  height: 65px;
+  top: 58px;
+  right: 0px;
+  text-align: center;
+  color: var(--secondary-background-color);
+  padding-top: 3px;
+}
+
+.search-bar-text {
+  padding: 4px 12px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  height: 15px;
+}
+
+.search-btn {
+  border-radius: 7px;
+  width: 90px;
+  height: 23px;
+  left: 135px;
+  top: 136px;
+  background: rgb(249, 243, 241);
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+ color: #394A59;
+}
+
+.search-radio {
+  width: 20px;
+  height: 10px;
+  line-height: 8px;
+}
+
+.search-input-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.text-input {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 14px;
+}
