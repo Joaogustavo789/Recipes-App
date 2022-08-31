@@ -44,21 +44,22 @@ const Login = () => {
 
   return (
     <div className="Login">
+      <h1 className="Login-title">Login</h1>
       <label htmlFor="email">
-        Usuário
         <input
           id="email"
           type="text"
+          placeholder="Digite seu email"
           data-testid="email-input"
           value={ email }
           onChange={ (e) => setEmail(e.target.value) }
         />
       </label>
       <label htmlFor="password">
-        Senha
         <input
           id="password"
           type="password"
+          placeholder="Digite sua senha"
           data-testid="password-input"
           value={ password }
           onChange={ (e) => setPassword(e.target.value) }

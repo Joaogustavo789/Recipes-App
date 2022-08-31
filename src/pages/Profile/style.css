@@ -1,0 +1,69 @@
+.Profile {
+  align-items: center;
+  background-color: var(--primary-background-color);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  margin-top: -80px;
+  padding: 0 10%;
+  top: 0;
+  width: 360px;
+}
+
+.Profile .email-user {
+  color: rgb(166, 3, 3);
+  font-family: 'Raleway';
+  font-size: 30px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.Profile .Profile-done-btn {
+  background: rgb(249, 243, 241);
+  border-radius: 5px;
+  color: rgb(57, 74, 89);
+  font-family: 'Raleway';
+  font-size: 22px;
+  font-weight: 400;
+  height: 53px;
+  line-height: 26px;
+  text-align: center;
+  width: 329px;
+}
+
+.Profile .Profile-favorite-btn {
+  background: rgb(249, 243, 241);
+  border-radius: 5px;
+  color: rgb(57, 74, 89);
+  font-family: 'Raleway';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  height: 53px;
+  left: 15px;
+  line-height: 26px;
+  text-align: center;
+  top: 267px;
+  width: 329px;
+}
+
+.Profile .Profile-logout-btn {
+  background: var(--secondary-background-color);
+  border-radius: 5px;
+  color: rgb(57, 74, 89);
+  font-family: 'Raleway';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  height: 53px;
+  left: 15px;
+  line-height: 26px;
+  text-align: center;
+  top: 347px;
+  width: 329px;
+}

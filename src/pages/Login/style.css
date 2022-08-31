@@ -1,5 +1,74 @@
 .Login {
   align-items: center;
+  background-color: var(--primary-background-color);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  padding: 0 10%;
+  top: 0;
+  width: 360px;
+}
+
+.Login .Login-title {
+  color: rgb(245, 136, 3);
+  font-family: 'Great Vibes';
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 400;
+  height: 88px;
+  left: 111px;
+  line-height: 88px;
+  top: 155px;
+  width: 137px;
+}
+
+.Login label {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.Login label input {
+  background-color: rgb(206, 199, 199);
+  border-radius: 10px;
+  color: black;
+  font-family: 'Raleway';
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  height: 35px;
+  left: 70px;
+  line-height: 16px;
+  opacity: 0.75;
+  padding: 4px 12px;
+  top: 348px;
+  width: 219px;
+}
+
+.Login button {
+  background: rgb(100, 113, 124);
+  border-radius: 8px;
+  color: rgb(249, 243, 241);
+  font-family: 'Raleway';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  height: 38.59px;
+  left: 104px;
+  line-height: 23px;
+  text-align: center;
+  top: 493px;
+  width: 151px;
+}
+
+/* .Login {
+  align-items: center;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -30,5 +99,4 @@
   border-radius: 16px;
   width: 50%;
 
-}
-
+} */
