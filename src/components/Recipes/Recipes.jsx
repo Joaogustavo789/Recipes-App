@@ -61,12 +61,12 @@ function Recipes() {
   };
 
   return (
-    <div>
-      <h2>Filters</h2>
-      <div>
+    <div className="recipes">
+      <div className="categoryButtonsContainer">
         {
           categoriesResult.length > 0 && categoriesResult.map((category) => (
             <button
+              className="categoryButton"
               key={ category.strCategory }
               type="button"
               data-testid={ `${category.strCategory}-category-filter` }
@@ -77,6 +77,7 @@ function Recipes() {
           ))
         }
         <button
+          className="categoryButton"
           data-testid="All-category-filter"
           type="button"
           onClick={ handleCategoryFilter }
@@ -84,7 +85,6 @@ function Recipes() {
           All
         </button>
       </div>
-      <h1>Recipes</h1>
       <div className="cards">
         {
           recipesResult.length > 0 && recipesResult.map((recipe, index) => (
@@ -95,20 +95,22 @@ function Recipes() {
               }
             >
               <div
-                width="230px"
+                className="card"
                 data-testid={ `${index}-recipe-card` }
               >
                 <img
-                  width="230px"
+                  className="card-image"
                   data-testid={ `${index}-card-img` }
                   src={ recipe.strMealThumb || recipe.strDrinkThumb }
                   alt={ recipe.strMeal || recipe.strDrink }
                 />
-                <h4
-                  data-testid={ `${index}-card-name` }
-                >
-                  {recipe.strMeal || recipe.strDrink}
-                </h4>
+                <div className="card-title">
+                  <span
+                    data-testid={ `${index}-card-name` }
+                  >
+                    {recipe.strMeal || recipe.strDrink}
+                  </span>
+                </div>
               </div>
             </Link>
           ))

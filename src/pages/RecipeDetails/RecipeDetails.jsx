@@ -5,9 +5,6 @@ import context from '../../context';
 import 'swiper/swiper-bundle.css';
 import DetailsFood from '../../components/DetailsFood/DetailsFood';
 import DetailsDrink from '../../components/DetailsDrink/DetailsDrink';
-import './style.css';
-import FavoriteButton from '../../components/FavoriteButton/FavoriteButton';
-import ShareButton from '../../components/ShareButton/ShareButton';
 
 const RecipeDetails = ({ isFood }) => {
   const { setShowHeader, setRecipeData, recipeData } = useContext(context);
@@ -45,17 +42,17 @@ const RecipeDetails = ({ isFood }) => {
 
   return (
     <div className="RecipeDetails">
-      <FavoriteButton isFood={ isFood } recipeData={ recipeData } />
-      <ShareButton isFood={ isFood } id={ id } />
       {isFood ? (
         <DetailsFood
           recipeData={ recipeData }
           recommendations={ recommendations }
+          isFood={ isFood }
         />
       ) : (
         <DetailsDrink
           recipeData={ recipeData }
           recommendations={ recommendations }
+          isFood={ isFood }
         />
       )}
     </div>

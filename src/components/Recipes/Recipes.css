@@ -1,5 +1,52 @@
-.cards {
+.recipes .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 18px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 9px;
+}
+
+.recipes .categoryButton {
+  border: 0;
+  border-radius: 4px;
+  color: var(--primary-grey-color);
+  font-size: 1.3rem;
+  height: 28px;
+  width: 100px;
+}
+
+.recipes .categoryButtonsContainer {
+  column-gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2rem;
+  row-gap: 10px;
+}
+
+.recipes .card {
+  background-color: var(--secondary-background-color);
+  border: 0;
+  border-radius: 8px;
+  min-height: 172px;
+  width: 162px;
+}
+
+.recipes .card-image {
+  border-radius: 8px;
+  height: 132px;
+  width: 100%;
+}
+
+.recipes .card-title {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

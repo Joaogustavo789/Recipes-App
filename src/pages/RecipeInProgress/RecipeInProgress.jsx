@@ -61,62 +61,96 @@ function RecipeInProgress({ isFood }) {
   const ingredientName = (index) => recipeData[`strIngredient${index + 1}`];
 
   return (
-    <section>
-      <h1>
-        Receitas em progresso
-      </h1>
+    <section className="recipe-details">
       <img
+        className="recipe-image"
         data-testid="recipe-photo"
-        width="100%"
         src={ recipeData.strDrinkThumb || recipeData.strMealThumb }
         alt=""
       />
-      <h2 data-testid="recipe-title">{recipeData.strDrink || recipeData.strMeal}</h2>
-      <h3 data-testid="recipe-category">{recipeData.strCategory}</h3>
-      <FavoriteButton recipeData={ recipeData } isFood={ isFood } />
-      <ShareButton isFood={ isFood } id={ recipeId } />
-      <fieldset>
-        <legend>Passos da Receita</legend>
-        { ingredientsKeys.map((key, index) => (
-          <div key={ key }>
-            <label
-              data-testid={ `${index}-ingredient-step` }
-              htmlFor={ ingredientName(index) }
-            >
-              {!ingredientsData[recipeId] ? (
-                <input
-                  checked={ false }
-                  type="checkbox"
-                  id={ ingredientName(index) }
-                  name={ ingredientName(index) }
-                  onChange={ handleChange }
-                />
-              ) : (
-                <input
-                  checked={ ingredientsData[recipeId]
-                    ?.some((ingredient) => ingredient === ingredientName(index)) }
-                  type="checkbox"
-                  id={ ingredientName(index) }
-                  name={ ingredientName(index) }
-                  onChange={ handleChange }
-                />
+      <div className="recipe-container">
+        <div className="title-container">
+          <p
+            className="recipe-title font-Great-Vibes"
+            data-testid="recipe-title"
+          >
+            {recipeData.strDrink || recipeData.strMeal}
+          </p>
 
-              )}
-              {`${recipeData[`strIngredient${index + 1}`]} - 
-            ${recipeData[`strMeasure${index + 1}`]}`}
-            </label>
+          <div className="favorite-button-container">
+            <FavoriteButton isFood={ isFood } recipeData={ recipeData } />
+            <ShareButton isFood={ isFood } id={ recipeId } />
           </div>
-        ))}
-      </fieldset>
-      <p data-testid="instructions">{recipeData.strInstructions}</p>
-      <button
-        disabled={ finishIsDisabled }
-        type="button"
-        data-testid="finish-recipe-btn"
-        onClick={ handleRoute }
-      >
-        Finish Recipes
-      </button>
+        </div>
+        <p
+          className="recipe-category"
+          data-testid="recipe-category"
+        >
+          {recipeData.strCategory}
+        </p>
+
+        <div>
+          <p className="ingredient-title">
+            Ingredients
+          </p>
+          { ingredientsKeys.map((key, index) => (
+            <div key={ key }>
+              <label
+                className="recipe-ingredient"
+                data-testid={ `${index}-ingredient-step` }
+                htmlFor={ ingredientName(index) }
+              >
+                {!ingredientsData[recipeId] ? (
+                  <input
+                    className="ingredient-checkbox"
+                    checked={ false }
+                    type="checkbox"
+                    id={ ingredientName(index) }
+                    name={ ingredientName(index) }
+                    onChange={ handleChange }
+                  />
+                ) : (
+                  <input
+                    checked={ ingredientsData[recipeId]
+                      ?.some((ingredient) => ingredient === ingredientName(index)) }
+                    type="checkbox"
+                    className="ingredient-checkbox"
+                    id={ ingredientName(index) }
+                    name={ ingredientName(index) }
+                    onChange={ handleChange }
+                  />
+                )}
+                {`${recipeData[`strIngredient${index + 1}`]} - 
+                  ${recipeData[`strMeasure${index + 1}`]}`}
+              </label>
+            </div>
+          ))}
+        </div>
+
+        <div>
+          <p className="ingredient-title">
+            Instructions
+          </p>
+          <p
+            className="recipe-instructions"
+            data-testid="instructions"
+          >
+            {recipeData.strInstructions}
+          </p>
+        </div>
+
+        <div className="start-recipe-button-container">
+          <button
+            className="start-recipe-button font-Great-Vibes"
+            disabled={ finishIsDisabled }
+            type="button"
+            data-testid="finish-recipe-btn"
+            onClick={ handleRoute }
+          >
+            Finish Recipe
+          </button>
+        </div>
+      </div>
     </section>
   );
 }

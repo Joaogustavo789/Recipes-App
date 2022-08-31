@@ -1,0 +1,118 @@
+.recipe-details {
+  width: 100%;
+}
+
+.recipe-details p {
+  margin-bottom: 0;
+}
+
+.recipe-details .recipe-image {
+  height: 33vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+.recipe-details .recipe-title {
+  color: var(--primary-red-color);
+  display: block;
+  font-size: 4rem;
+  line-height: 4rem;
+  margin: 0 0 -15px;
+  padding: 10px 0 0;
+}
+
+.favorite-button-container {
+  text-align: right;
+}
+
+.recipe-details .title-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 -5px;
+}
+
+.recipe-details .recipe-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.recipe-details .recipe-category {
+  font-size: 2.5rem;
+  margin: -5px 0 0;
+}
+
+.recipe-details .recipe-ingredient {
+  font-size: 1.8rem;
+  margin-bottom: 0;
+}
+
+.recipe-details .recipe-instructions {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  padding: 0 0 20px;
+}
+
+.recipe-details .swiper-container {
+  background-color: var(--secondary-background-color);
+  width: 100%;
+}
+
+.recipe-details .swiper-image {
+  max-width: 360px;
+  object-fit: contain;
+  object-position: center center;
+  width: 100%;
+}
+
+.recipe-details .swiper-image-container {
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.recipe-details .start-recipe-button-container {
+  padding: 70px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.recipe-details .recomendation-text {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  padding: 20px 0;
+}
+
+.recipe-details .iframe {
+  aspect-ratio: 16 / 9;
+  max-width: 360px;
+  width: 100%;
+}
+
+.recipe-details .iframe-container {
+  text-align: center;
+}
+
+.recipe-details .start-recipe-button {
+  background-color: var(--primary-grey-color);
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  font-size: 3rem;
+  padding: 12px 28px;
+}
+
+.recipe-details .ingredient-checkbox {
+  margin-right: 8px;
+}
+
+.recipe-details .ingredient-title {
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0;
+}

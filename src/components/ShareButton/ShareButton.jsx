@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import shareIcon from '../../images/shareIcon.svg';
+import './shareButton.css';
 
 const copy = require('clipboard-copy');
 
@@ -16,7 +17,7 @@ const ShareButton = ({ isFood, id }) => {
     <button
       type="button"
       data-testid="share-btn"
-      className="ShareButton"
+      className="share-button"
       onClick={ handleClick }
     >
       {isCopied ? 'Link copied!' : <img src={ shareIcon } alt="ShareButton" />}
